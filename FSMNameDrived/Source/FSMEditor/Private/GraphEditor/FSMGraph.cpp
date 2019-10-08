@@ -1,4 +1,4 @@
-#include "FSMGraph.h"
+#include "GraphEditor/FSMGraph.h"
 #include "FSM.h"
 
 UFSM * UFSMGraph::GetFSM() const

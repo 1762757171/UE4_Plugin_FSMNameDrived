@@ -1,4 +1,4 @@
-#include "FSMTransitionNameValidator.h"
+#include "GraphEditor/NameValidators/FSMTransitionNameValidator.h"
 #include "FSM.h"
 #include "GraphEditor/FSMGraph.h"
 #include "GraphEditor/Connection/FSMTransitionNode.h"

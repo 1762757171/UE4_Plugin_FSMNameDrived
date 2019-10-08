@@ -57,7 +57,7 @@ public:
 /**
  * 
  */
-UCLASS()
+UCLASS(hidecategories = Object, BlueprintType)
 class FSMASSET_API UFSM : public UObject
 {
 	GENERATED_BODY()

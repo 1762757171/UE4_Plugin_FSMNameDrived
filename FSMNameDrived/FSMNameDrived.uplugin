@@ -11,18 +11,24 @@
 	"MarketplaceURL": "",
 	"SupportURL": "",
 	"CanContainContent": true,
-	"IsBetaVersion": true,
-	"Installed": false,
+	"IsBetaVersion": false,
+	"Installed": true,
 	"Modules": [
-		{
-			"Name": "FSMAsset",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "FSMEditor",
-			"Type": "Editor",
-			"LoadingPhase": "PreDefault"
-		}
+    {
+      "Name": "FSMAsset",
+      "Type": "Runtime",
+      "LoadingPhase": "Default",
+      "WhitelistPlatforms": [
+        "Win64"
+      ]
+    },
+    {
+      "Name": "FSMEditor",
+      "Type": "Editor",
+      "LoadingPhase": "PreDefault",
+      "WhitelistPlatforms": [
+        "Win64"
+      ]
+    }
 	]
 }

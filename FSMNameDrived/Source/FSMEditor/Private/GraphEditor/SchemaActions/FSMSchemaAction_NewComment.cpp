@@ -1,4 +1,4 @@
-#include "FSMSchemaAction_NewComment.h"
+#include "GraphEditor/SchemaActions/FSMSchemaAction_NewComment.h"
 #include "SlateRect.h"
 #include "EdGraphNode_Comment.h"
 #include "FSMAssetEditor.h"

@@ -66,9 +66,6 @@ bool FTransRule::RenameRule(const FName& OldName, const FName& NewName)
 
 bool FTransRule::RenameState(const FName& OldName, const FName& NewName)
 {
-	if ((!IsValidRule(OldName)) && (FromState != OldName)) {
-		return false;
-	}
 	if (FromState == OldName) {
 		FromState = NewName;
 	}
@@ -197,6 +194,9 @@ bool UFSM::RenameState(const FName& OldName, const FName& NewName)
 {
 	if (OldName == NewName) {
 		return false;
+	}
+	if (EntryState == OldName) {
+		EntryState = NewName;
 	}
 	return StateMachine.RenameState(OldName, NewName);
 }

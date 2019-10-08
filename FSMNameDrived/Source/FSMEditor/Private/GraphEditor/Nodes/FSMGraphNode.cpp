@@ -1,4 +1,4 @@
-#include "FSMGraphNode.h"
+#include "GraphEditor/Nodes/FSMGraphNode.h"
 #include "Widgets/SBoxPanel.h"
 #include "Widgets/Images/SImage.h"
 #include "SGraphPreviewer.h"

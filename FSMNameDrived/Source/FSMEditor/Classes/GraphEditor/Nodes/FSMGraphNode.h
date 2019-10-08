@@ -25,14 +25,14 @@ public:
 	virtual TSharedPtr<class INameValidatorInterface> MakeNameValidator() const override;
 	virtual void OnRenameNode(const FString& NewName) override;
 
-	void SetName(FName NewName);
+	FSMEDITOR_API void SetName(FName NewName);
 
-	UEdGraphPin* GetOutputPin() const;
-	UEdGraphPin* GetInputPin() const;
+	FSMEDITOR_API UEdGraphPin* GetOutputPin() const;
+	FSMEDITOR_API UEdGraphPin* GetInputPin() const;
 
-	FName GetNodeName() const;
+	FSMEDITOR_API FName GetNodeName() const;
 private:
-	class UFSM* GetFSM() const;
+	FSMEDITOR_API class UFSM* GetFSM() const;
 private:
 	UPROPERTY()
 	FName NodeName;

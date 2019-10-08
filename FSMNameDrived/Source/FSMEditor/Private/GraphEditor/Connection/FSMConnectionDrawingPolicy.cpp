@@ -1,4 +1,4 @@
-#include "FSMConnectionDrawingPolicy.h"
+#include "GraphEditor/Connection/FSMConnectionDrawingPolicy.h"
 #include "DrawElements.h"
 #include "GraphEditor/Connection/FSMTransitionNode.h"
 #include "GraphEditor/Nodes/FSMGraphNode.h"

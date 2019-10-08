@@ -1,4 +1,4 @@
-#include "FSMSchemaAction_NewNode.h"
+#include "GraphEditor/SchemaActions/FSMSchemaAction_NewNode.h"
 #include "UnrealEd.h"
 #include "UnrealMath.h"
 #include "ScopedTransaction.h"

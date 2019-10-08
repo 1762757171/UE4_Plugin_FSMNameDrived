@@ -7,7 +7,7 @@
 
 /** Action to add a comment to the graph */
 USTRUCT()
-struct FFSMSchemaAction_NewComment : public FEdGraphSchemaAction
+struct FSMEDITOR_API FFSMSchemaAction_NewComment : public FEdGraphSchemaAction
 {
 	GENERATED_BODY()
 public:

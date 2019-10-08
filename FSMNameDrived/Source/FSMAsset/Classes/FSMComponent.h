@@ -26,6 +26,9 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 public:
+	UFUNCTION(BlueprintCallable)
+	void ChangeFSM(class UFSM* NewFSM);
+
 	//Restart FSM, with empty previous state
 	UFUNCTION(BlueprintCallable)
 	void RestartFSM();
@@ -47,7 +50,10 @@ public:
 
 private:
 	UPROPERTY(EditDefaultsOnly)
-		TAssetPtr<class UFSM> FSMAsset;
+		TAssetPtr<class UFSM> FSMAssetPtr;
+
+	UPROPERTY(VisibleInstanceOnly)
+	class UFSM* FSM;
 
 	UPROPERTY(VisibleAnywhere)
 		FName CurrentState;

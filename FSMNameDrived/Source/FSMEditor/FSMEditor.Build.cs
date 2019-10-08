@@ -11,24 +11,30 @@ public class FSMEditor : ModuleRules
 		PublicIncludePaths.AddRange(
 			new string[] {
 				// ... add public include paths required here ...
-			}
+            }
 			);
-				
-		
-		PrivateIncludePaths.AddRange(
-			new string[] {
+
+
+        PrivateIncludePaths.AddRange(
+            new string[] {
 				// ... add other private include paths required here ...
-			}
-			);
+                "FSMEditor/Private",
+            }
+            );
 			
 		
 		PublicDependencyModuleNames.AddRange(
 			new string[]
 			{
 				"Core",
+                "CoreUObject",
+                "Engine",
+                "Slate",
 				// ... add other public dependencies that you statically link with here ...
-                "FSMAsset"
-			}
+                "Projects",
+                "FSMAsset",
+                "BlueprintGraph",
+            }
 			);
 			
 		
@@ -64,11 +70,11 @@ public class FSMEditor : ModuleRules
 
 				// e.g. FPlatformApplicationMisc::ClipboardCopy
 				"ApplicationCore",
+                "PropertyEditor",
             }
 			);
-		
-		
-		DynamicallyLoadedModuleNames.AddRange(
+
+        DynamicallyLoadedModuleNames.AddRange(
 			new string[]
 			{
 				// ... add any modules that your module loads dynamically here ...

@@ -7,7 +7,7 @@
 
 /** Action to add a node to the graph */
 USTRUCT()
-struct FFSMSchemaAction_NewNode : public FEdGraphSchemaAction
+struct FSMEDITOR_API FFSMSchemaAction_NewNode : public FEdGraphSchemaAction
 {
 	GENERATED_BODY()
 public:

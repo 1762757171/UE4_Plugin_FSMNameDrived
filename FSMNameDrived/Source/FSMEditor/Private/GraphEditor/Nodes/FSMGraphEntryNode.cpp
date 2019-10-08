@@ -1,6 +1,6 @@
 // Copyright 1998-2018 Epic Games, Inc. All Rights Reserved.
 
-#include "FSMGraphEntryNode.h"
+#include "GraphEditor/Nodes/FSMGraphEntryNode.h"
 #include "EdGraph/EdGraph.h"
 #include "GraphEditor/FSMGraphSchema.h"
 #include "Widgets/SBoxPanel.h"

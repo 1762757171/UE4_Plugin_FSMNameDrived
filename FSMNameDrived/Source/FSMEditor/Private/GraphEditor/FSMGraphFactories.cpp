@@ -1,5 +1,5 @@
-#include "FSMGraphFactories.h"
-#include "FSMGraphSchema.h"
+#include "GraphEditor/FSMGraphFactories.h"
+#include "GraphEditor/FSMGraphSchema.h"
 #include "GraphEditor/Nodes/FSMGraphNode.h"
 #include "GraphEditor/Nodes/FSMGraphEntryNode.h"
 #include "GraphEditor/Pins/FSMGraphPin.h"

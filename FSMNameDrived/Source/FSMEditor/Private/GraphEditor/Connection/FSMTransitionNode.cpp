@@ -1,4 +1,4 @@
-#include "FSMTransitionNode.h"
+#include "GraphEditor/Connection/FSMTransitionNode.h"
 #include "EdGraph/EdGraph.h"
 #include "GraphEditor/Nodes/FSMGraphNode.h"
 #include "ScopedTransaction.h"

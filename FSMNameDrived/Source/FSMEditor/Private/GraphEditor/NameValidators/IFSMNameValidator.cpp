@@ -1,4 +1,4 @@
-#include "IFSMNameValidator.h"
+#include "GraphEditor/NameValidators/IFSMNameValidator.h"
 #include "FSM.h"
 #include "GraphEditor/FSMGraph.h"
 #include "EdGraph/EdGraphNode.h"

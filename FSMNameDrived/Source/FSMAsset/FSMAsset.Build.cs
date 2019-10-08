@@ -27,7 +27,8 @@ public class FSMAsset : ModuleRules
 			{
 				"Core",
 				// ... add other public dependencies that you statically link with here ...
-			}
+                "Projects",
+            }
 			);
 			
 		
@@ -43,12 +44,12 @@ public class FSMAsset : ModuleRules
 			);
         
         // We need this dependency when working in the editor mode/built with editor
-        /*if (Target.bBuildEditor)
+        if (Target.bBuildEditor)
         {
             PrivateDependencyModuleNames.Add("UnrealEd");
             // Accessing the menu
             PrivateDependencyModuleNames.Add("WorkspaceMenuStructure");
-        }*/
+        }
 
 
         DynamicallyLoadedModuleNames.AddRange(

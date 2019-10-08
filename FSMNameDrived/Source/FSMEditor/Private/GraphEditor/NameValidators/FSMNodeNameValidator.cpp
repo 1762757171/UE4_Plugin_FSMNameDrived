@@ -1,4 +1,4 @@
-#include "FSMNodeNameValidator.h"
+#include "GraphEditor/NameValidators/FSMNodeNameValidator.h"
 #include "FSM.h"
 #include "GraphEditor/FSMGraph.h"
 #include "GraphEditor/Nodes/FSMGraphNode.h"

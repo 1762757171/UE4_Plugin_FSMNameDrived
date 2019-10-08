@@ -17,12 +17,14 @@ UFSMComponent::UFSMComponent()
 // Called when the game starts
 void UFSMComponent::BeginPlay()
 {
-	Super::BeginPlay();
-
-	// ...
 	//Load it right now
-	//it's small, no need to load async
-	FSMAsset.LoadSynchronous();
+	//It's not allow to load async
+	if (FSMAssetPtr.IsNull()) {
+		return;
+	}
+	FSM = FSMAssetPtr.LoadSynchronous();
+
+	Super::BeginPlay();
 }
 
 
@@ -34,9 +36,19 @@ void UFSMComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 	// ...
 }
 
+void UFSMComponent::ChangeFSM(class UFSM* NewFSM)
+{
+	FSM = NewFSM;
+	EndFSM();
+}
+
 void UFSMComponent::RestartFSM()
 {
-	CurrentState = FSMAsset.Get()->EntryState;
+	if (!FSM) {
+		EndFSM();
+		return;
+	}
+	CurrentState = FSM->EntryState;
 	OnStateChanged.Broadcast(GetOwner(), NAME_None, CurrentState);
 }
 
@@ -47,7 +59,7 @@ FName UFSMComponent::GetCurrentState() const
 
 void UFSMComponent::ReceiveKeyword(const FName & Condition)
 {
-	GotoStateDirectly(FSMAsset.Get()->MeetCondition(GetCurrentState(), Condition));
+	GotoStateDirectly(FSM->MeetCondition(GetCurrentState(), Condition));
 }
 
 void UFSMComponent::GotoStateDirectly(const FName & NewState)
@@ -56,8 +68,8 @@ void UFSMComponent::GotoStateDirectly(const FName & NewState)
 		return;
 	}
 	auto NextState = NewState;
-	if (!FSMAsset.Get()->HasState(NewState)) {
-		NextState = NAME_None;
+	if (!FSM->HasState(NewState)) {
+		return;
 	}
 	auto PrevState = GetCurrentState();
 	CurrentState = NextState;
@@ -71,6 +83,6 @@ void UFSMComponent::EndFSM()
 
 bool UFSMComponent::IsRunning() const
 {
-	return !(CurrentState.IsNone());
+	return (!FSM) || (!(CurrentState.IsNone()));
 }
 
